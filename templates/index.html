@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+
+    <title>DRONA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/datatables.min.css"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+  <style>
+    body {
+      padding-top: 35px;
+    }
+
+
+
+    #container {
+    height: 400px;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Cardo', serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 1.0em;
+}
+
+em {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style:normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+
+  &::before, &::after {
+  content: "§";
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+    opacity: 0.2;
+  margin: 0 0.6em;
+  font-size: 0.5em;
+}
+
+}
+
+em1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.0em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style:normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+
+
+  &::before, &::after {
+  content: "§";
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+    opacity: 0.2;
+  margin: 0 0.6em;
+  font-size: 0.5em;
+}
+
+}
+
+em2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style:normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+
+
+  &::before, &::after {
+  content: "§";
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+    opacity: 0.2;
+  margin: 0 0.6em;
+  font-size: 0.5em;
+}
+
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container ">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="/">DRONA</a>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="page-header">Drone Basic Example
+                </h3>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+
+          <div class="col-xs-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1 class="panel-title">Select Drone Actions</h1>
+              </div>
+              <div id="container1" class="panel-body box-container">
+                <div itemid="itm-1" value="takeoff" class="btn btn-default box-item">Takeoff</div>
+                <div itemid="itm-2" value="land" class="btn btn-default box-item">Land</div>
+                <div itemid="itm-3" value="delay-5" class="btn btn-default box-item" contenteditable="true">Delay-5</div>
+                <div itemid="itm-4" value="up-100" class="btn btn-default box-item"  contenteditable="true">Up-100</div>
+                <div itemid="itm-5" value="down-30" class="btn btn-default box-item" contenteditable="true">Down-30</div>
+                <div itemid="itm-6" value="left-10" class="btn btn-default box-item" contenteditable="true">Left-10</div>
+                <div itemid="itm-7" value="right-10" class="btn btn-default box-item" contenteditable="true">Right-10</div>
+                <div itemid="itm-8" value="forward-10" class="btn btn-default box-item" contenteditable="true">Forward-10</div>
+                <div itemid="itm-9" value="back-10" class="btn btn-default box-item" contenteditable="true">Back-10</div>
+                <div itemid="itm-10" value="flip-l" class="btn btn-default box-item" contenteditable="true">Flip-l</div>
+                <div itemid="itm-11" value="cw-10" class="btn btn-default box-item" contenteditable="true">Cw-10</div>
+                <div itemid="itm-12" value="ccw-10" class="btn btn-default box-item" contenteditable="true">Ccw-10</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1 class="panel-title">Selected Actions</h1>
+              </div>
+              <div id="container2" class="panel-body box-container"></div>
+            </div>
+          </div>
+
+          <button id="action" type="button" class="btn btn-primary">Start</button>
+          <br><br>
+          <div id="result"></div>
+
+        </div>
+    </div>
+    <!-- /.container -->
+</body>
+
+<script type="text/javascript" src="../static/js/script.js"></script>
+
+</html>

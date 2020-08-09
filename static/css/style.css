@@ -1,0 +1,11 @@
+/* Styles go here */
+
+.box-container {
+	height: 60%;
+	overflow: auto;
+}
+
+.box-item {
+	width: 100%;
+	z-index: 1000
+}
