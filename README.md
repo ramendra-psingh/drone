@@ -13,7 +13,11 @@
 
 # How to run
 
-- python app.py 
+- Run python app.py 
+- Access url : http://localhost:5000/
+- Select Drone actions and drop in Selected Actions Box
+- Click on Start Button
+
 ```
  * Serving Flask app "app" (lazy loading)
  * Environment: production
